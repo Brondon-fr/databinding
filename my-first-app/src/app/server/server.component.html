@@ -1,0 +1,11 @@
+<button 
+class="btn btn-primary"
+ [disabled] ="!allowNewServer" 
+ (click)="getServerCreateStatut()" >Add Server</button>
+<P>{{serverCreateStatut}}</P>
+<p>{{'Server'}} with ID {{'serverID'}} is {{'getServerStatut()'}}</p>
+<p ngStyle="{backgroundColor: getColor()}">{{'Server'}}   was crated, server name is {{serverName}}</p>
+<input type="text"
+class="form-control"
+[(ngModel)] ="serverName">
+<p *ngIf="serverCreate">Server was crated, server name is {{serverName}}</p>
